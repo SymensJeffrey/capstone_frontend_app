@@ -1,8 +1,13 @@
 <template>
   <div class="home">
     <h1>{{ message }}</h1>
-    <div>
-      {{ lifts }}
+    <div v-for="lift in lifts">
+      <p> ID: {{ lift.id }} </p>
+      <p> Exercise id: {{ lift.exercise_id }} </p>
+      <p> Reps: {{ lift.reps }} </p>
+      <p> Weight: {{ lift.weigth }} lbs</p>
+      <p> Sets: {{ lift.sets}} </p>
+      <hr />
     </div>
   </div>
 </template>
