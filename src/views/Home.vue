@@ -12,7 +12,7 @@
     <dialog id="exercise-details">
       <form method="dialog">
         <h1>Hello</h1>
-
+        <button>Close</button>
       </form>
     </dialog>
   </div>
