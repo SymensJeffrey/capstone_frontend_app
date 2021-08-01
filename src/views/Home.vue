@@ -6,17 +6,24 @@
       <p>ID:{{ exercise.id }}</p>
       <p>Name:{{ exercise.name }}</p>
       <button v-on:click="exerciseShow(exercise)"> More Info </button>
-      <button v-on:click="liftCreate()">Add to workout</button> 
+      <button v-on:click="addToWorkoutPopup(exercise)">Add to workout</button> 
       <hr />
     </div>
     <dialog id="exercise-details">
       <form method="dialog">
-        <h1>{{ currentExercise.name }}</h1>
+        <h2>{{ currentExercise.name }}</h2>
         <p>ID:{{ currentExercise.id }}</p>
         <p>Name:{{ currentExercise.name }}</p>
         <p>Description:{{ currentExercise.description }}</p>
         <p>Equipment:{{ currentExercise.equipment }}</p>
         <p>Muscles:{{ currentExercise.category }}</p>
+        <button>Close</button>
+      </form>
+    </dialog>
+    <dialog id="lift-create">
+      <form method="dialog">
+        <h2>Adding to Workout</h2>
+        <p> Name: {{ currentExercise.name }} </p>
         <button>Close</button>
       </form>
     </dialog>
@@ -49,6 +56,11 @@
         console.log("showing...")
         this.currentExercise = exercise;
         document.querySelector("#exercise-details").showModal();
+      },
+
+      addToWorkoutPopup: function(exercise) {
+        this.currentExercise = exercise;
+        document.querySelector("#lift-create").showModal();
       },
 
       liftCreate: function() {
