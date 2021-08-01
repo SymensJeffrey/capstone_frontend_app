@@ -6,6 +6,7 @@
       <p>ID:{{ exercise.id }}</p>
       <p>Name:{{ exercise.name }}</p>
       <button v-on:click="exerciseShow(exercise)"> More Info </button>
+      <button v-on:click="liftCreate">Add to workout</button> 
       <hr />
     </div>
     <dialog id="exercise-details">
@@ -48,6 +49,10 @@
         console.log("showing...")
         this.currentExercise = exercise;
         document.querySelector("#exercise-details").showModal();
+      },
+
+      liftCreate: function() {
+        console.log("creaeting lift...")
       },
     },
   };
