@@ -43,7 +43,9 @@
         message: "GYMOLOGY",
         exercises: [],
         currentExercise: {},
-        newLiftParams: {}
+        newLiftParams: {},
+        currentUser: {},
+        lifts: [],
       };
     },
     created: function () {
@@ -69,6 +71,18 @@
 
       liftCreate: function() {
         console.log("creating lift...")
+        var LiftParams = {
+          reps: this.newLiftParams.reps,
+          weight: this.newLiftParams.weight,
+          sets: this.newLiftParams.sets,
+          user_id: localStorage.getItem("user_id"),
+          exercise_id: this.currentExercise.id
+        };
+        axios.post("/lifts", LiftParams).then(response => {
+          console.log(response.data);
+          this.lifts.push(response.data);
+          this.newLiftParams = {};
+        })
       },
     },
   };
