@@ -9,6 +9,12 @@
       <button v-on:click="exerciseShow()"> More Info </button>
       <hr />
     </div>
+    <dialog id="exercise-details">
+      <form method="dialog">
+        <h1>Hello</h1>
+
+      </form>
+    </dialog>
   </div>
 </template>
 
@@ -21,6 +27,7 @@
       return {
         message: "GYMOLOGY",
         exercises: [],
+        currentexercise: {}
       };
     },
     created: function () {
@@ -33,9 +40,11 @@
         this.exercises = response.data;
       });
       },
-      exerciseShow: function() {
+      exerciseShow: function(exercise) {
         console.log("showing...")
-      }
+        this.currentExercise = exercise;
+        document.querySelector("#exercise-details").showModal();
+      },
     },
   };
 </script>
