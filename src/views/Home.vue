@@ -3,15 +3,19 @@
     <h1>{{ message }}</h1>
     <hr />
     <div v-for="exercise in exercises">
-      ID:<p>{{ exercise.id }}</p>
-      Name:<p>{{ exercise.name }}</p>
-      Description<p>{{ exercise.description }}</p>
-      <button v-on:click="exerciseShow()"> More Info </button>
+      <p>ID:{{ exercise.id }}</p>
+      <p>Name:{{ exercise.name }}</p>
+      <button v-on:click="exerciseShow(exercise)"> More Info </button>
       <hr />
     </div>
     <dialog id="exercise-details">
       <form method="dialog">
-        <h1>Hello</h1>
+        <h1>{{ currentExercise.name }}</h1>
+        <p>ID:{{ currentExercise.id }}</p>
+        <p>Name:{{ currentExercise.name }}</p>
+        <p>Description:{{ currentExercise.description }}</p>
+        <p>Equipment:{{ currentExercise.equipment }}</p>
+        <p>Muscles:{{ currentExercise.category }}</p>
         <button>Close</button>
       </form>
     </dialog>
@@ -27,7 +31,7 @@
       return {
         message: "GYMOLOGY",
         exercises: [],
-        currentexercise: {}
+        currentExercise: {}
       };
     },
     created: function () {
