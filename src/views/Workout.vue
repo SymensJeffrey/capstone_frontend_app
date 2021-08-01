@@ -5,7 +5,7 @@
       <p> ID: {{ lift.id }} </p>
       <p> Exercise id: {{ lift.exercise_id }} </p>
       <p> Reps: {{ lift.reps }} </p>
-      <p> Weight: {{ lift.weigth }} lbs</p>
+      <p> Weight: {{ lift.weight }} lbs</p>
       <p> Sets: {{ lift.sets}} </p>
       <hr />
     </div>
