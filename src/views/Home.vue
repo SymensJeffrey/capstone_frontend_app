@@ -52,7 +52,7 @@
       },
 
       liftCreate: function() {
-        console.log("creaeting lift...")
+        console.log("creating lift...")
       },
     },
   };
