@@ -6,6 +6,7 @@
       ID:<p>{{ exercise.id }}</p>
       Name:<p>{{ exercise.name }}</p>
       Description<p>{{ exercise.description }}</p>
+      <button v-on:click="exerciseShow()"> More Info </button>
       <hr />
     </div>
   </div>
@@ -32,6 +33,9 @@
         this.exercises = response.data;
       });
       },
+      exerciseShow: function() {
+        console.log("showing...")
+      }
     },
   };
 </script>
