@@ -1,6 +1,9 @@
 <template>
   <div class="home">
     <h1>{{ message }}</h1>
+    <div>
+
+    </div>
   </div>
 </template>
 
@@ -10,10 +13,16 @@
   export default {
     data: function () {
       return {
-        message: "Hello World!",
+        message: "GYMOLOGY",
       };
     },
-    created: function () {},
-    methods: {},
+    created: function () {
+      this.exerciseIndex()
+    },
+    methods: {
+      exerciseIndex: function() {
+        console.log("indexing...")
+      },
+    },
   };
 </script>
