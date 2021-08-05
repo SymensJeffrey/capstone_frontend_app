@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <h1>{{ message }}</h1>
+    <p><button v-on:click="workoutCreate()">Finish Workout</button>
     <div v-for="lift in lifts">
       <p> ID: {{ lift.id }} </p>
       <p> Exercise id: {{ lift.exercise_id }} </p>
@@ -31,6 +32,9 @@
        axios.get("/lifts").then((response) => {console.log("lift index", response); 
         this.lifts = response.data;
       });
+      },
+      workoutCreate: function() {
+        console.log("creating workout...")
       },
     },
   };
