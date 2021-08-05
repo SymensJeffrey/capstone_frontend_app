@@ -35,6 +35,10 @@
       },
       workoutCreate: function() {
         console.log("creating workout...")
+        axios.post("/workouts").then((response) => {console.log("workout create", response);
+          this.workout = response.data;
+        });
+        // this.$router.push("/");
       },
     },
   };
