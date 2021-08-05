@@ -5,6 +5,7 @@ import Signup from '../views/Signup.vue'
 import Workout from '../views/Workout.vue'
 import Login from "../views/Login.vue";
 import Logout from "../views/Logout.vue";
+import Profile from '../views/Profile.vue';
 
 
 Vue.use(VueRouter)
@@ -15,6 +16,7 @@ const routes = [
   { path: "/signup", name: "signup", component: Signup },
   { path: "/login", name: "login", component: Login },
   { path: "/logout", name: "logout", component: Logout },
+  { path: "/profile", name: "profile", component: Profile },
 ]
 
 const router = new VueRouter({
