@@ -4,7 +4,7 @@
     <p><button v-on:click="workoutCreate()">Finish Workout</button>
     <div v-for="lift in lifts">
       <p> ID: {{ lift.id }} </p>
-      <p> Exercise id: {{ lift.exercise_id }} </p>
+      <p> Name: {{ lift.exercise.name }} </p>
       <p> Reps: {{ lift.reps }} </p>
       <p> Weight: {{ lift.weight }} lbs</p>
       <p> Sets: {{ lift.sets}} </p>
