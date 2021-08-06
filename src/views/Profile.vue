@@ -56,7 +56,7 @@
       },
       workoutShow: function(workout) {
         this.currentWorkout = workout
-        axios.get("/workouts/8").then((response) => {console.log("workoutshow", response);
+        axios.get(`/workouts/${workout.id}`).then((response) => {console.log("workoutshow", response);
         this.currentWorkout = response.data;
         this.lifts = this.currentWorkout.lifts
         })
