@@ -8,7 +8,7 @@
         Reps: {{ lift.reps }} |
         Weight: {{ lift.weight }} lbs |
         Sets: {{ lift.sets}}
-        
+
       </p>
       <hr />
     </div>
@@ -40,7 +40,7 @@
         axios.post("/workouts").then((response) => {console.log("workout create", response);
           this.workout = response.data;
         });
-        // this.$router.push("/");
+        this.$router.push("/profile");
       },
     },
   };
