@@ -50,7 +50,7 @@
       });
       },
       userShow: function() {
-        axios.get(`/users/7`).then((response) => {console.log(response)
+        axios.get(`/users/${localStorage.user_id}`).then((response) => {console.log(response)
         this.user = response.data;
         });
       },
