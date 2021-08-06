@@ -46,6 +46,7 @@ import axios from "axios"
     },
     created: function () {
       this.userShow()
+      this.isLoggedIn()
     },
     methods: {
       isLoggedIn: function() {
