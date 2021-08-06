@@ -6,7 +6,7 @@
       <router-link to="/signup">Signup</router-link> | 
       <router-link to="/login">Login</router-link> |
       <router-link to="/logout">Logout</router-link> |
-      <router-link to="/profile">Profile</router-link>
+      <router-link to="/profile">{{user.name}}</router-link>
     </div>
     <router-view/>
   </div>
@@ -34,3 +34,26 @@
   color: #42b983;
 }
 </style>
+
+<script>
+import axios from "axios"
+  export default {
+    data: function () {
+      return {
+        message: "Welcome to Vue.js!",
+        user: ""
+      };
+    },
+    created: function () {
+      this.userShow()
+    },
+    methods: {
+      userShow: function() {
+        axios.get(`/users/${localStorage.user_id}`).then((response) => {console.log(response)
+        this.user = response.data;
+        });
+      },
+    },
+  };
+</script>
+
