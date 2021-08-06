@@ -3,10 +3,10 @@
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/workout">Workout</router-link> | 
-      <router-link to="/signup">Signup</router-link> | 
-      <router-link to="/login">Login</router-link> |
-      <router-link to="/logout">Logout</router-link> |
-      <router-link to="/profile">{{user.name}}</router-link>
+      <router-link v-if="!isLoggedIn()" to="/signup">Signup</router-link> | 
+      <router-link v-if="!isLoggedIn()" to="/login">Login</router-link> |
+      <router-link v-if="isLoggedIn()" to="/logout">Logout</router-link> |
+      <router-link v-if="isLoggedIn()" to="/profile">{{user.name}}</router-link>
     </div>
     <router-view/>
   </div>
@@ -48,6 +48,13 @@ import axios from "axios"
       this.userShow()
     },
     methods: {
+      isLoggedIn: function() {
+      if (localStorage.getItem("jwt")) {
+        return true;
+      } else {
+        return false;
+      }      
+      },
       userShow: function() {
         axios.get(`/users/${localStorage.user_id}`).then((response) => {console.log(response)
         this.user = response.data;
