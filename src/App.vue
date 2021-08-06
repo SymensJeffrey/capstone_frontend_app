@@ -41,7 +41,7 @@ import axios from "axios"
     data: function () {
       return {
         message: "Welcome to Vue.js!",
-        user: ""
+        user: "",
       };
     },
     created: function () {

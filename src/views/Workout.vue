@@ -23,7 +23,7 @@
     data: function () {
       return {
         message: "Workout",
-        lifts: []
+        lifts: [],
       };
     },
     created: function () {
@@ -44,7 +44,8 @@
       },
       pushToHome: function() {
         this.$router.push("/");
-      }
+      },
+      isLiftsEmpty: function() {}
     },
   };
 </script>
