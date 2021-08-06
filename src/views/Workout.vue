@@ -8,10 +8,10 @@
         Reps: {{ lift.reps }} |
         Weight: {{ lift.weight }} lbs |
         Sets: {{ lift.sets}}
-
       </p>
       <hr />
     </div>
+    <button v-on:click="pushToHome()">Add Another Exercise</button>
   </div>
 </template>
 
@@ -42,6 +42,9 @@
         });
         this.$router.push("/profile");
       },
+      pushToHome: function() {
+        this.$router.push("/");
+      }
     },
   };
 </script>
