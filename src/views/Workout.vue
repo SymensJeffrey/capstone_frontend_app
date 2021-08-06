@@ -3,11 +3,13 @@
     <h1>{{ message }}</h1>
     <p><button v-on:click="workoutCreate()">Finish Workout</button>
     <div v-for="lift in lifts">
-      <p> ID: {{ lift.id }} </p>
-      <p> Name: {{ lift.exercise.name }} </p>
-      <p> Reps: {{ lift.reps }} </p>
-      <p> Weight: {{ lift.weight }} lbs</p>
-      <p> Sets: {{ lift.sets}} </p>
+      <p>
+        Name: {{ lift.exercise.name }} |
+        Reps: {{ lift.reps }} |
+        Weight: {{ lift.weight }} lbs |
+        Sets: {{ lift.sets}}
+        
+      </p>
       <hr />
     </div>
   </div>
