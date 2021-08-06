@@ -13,7 +13,8 @@
         <label>Password:</label>
         <input type="password" v-model="newSessionParams.password" />
       </div>
-      <input type="submit" value="Submit" />
+      <input type="submit" value="Submit" />       
+      <button v-on:click="pushToSignup()">Signup</button>
     </form>
   </div>
 </template>
@@ -45,6 +46,9 @@
             this.password = "";
           });
       },
+      pushToSignup: function() {
+        this.$router.push("/signup");
+      }
     },
   };
 </script>
