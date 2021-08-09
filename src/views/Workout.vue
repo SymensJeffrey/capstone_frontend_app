@@ -1,7 +1,8 @@
 <template>
   <div class="home">
     <h1>{{ message }}</h1>
-    <p><button v-on:click="workoutCreate()">Finish Workout</button>
+    <p><button v-if="!isLiftsEmpty()" v-on:click="workoutCreate()">Finish Workout</button>
+    <h2>{{noLiftMessage}}</h2>
     <div v-for="lift in lifts">
       <p>
         Name: {{ lift.exercise.name }} |
@@ -11,7 +12,7 @@
       </p>
       <hr />
     </div>
-    <button v-on:click="pushToHome()">Add Another Exercise</button>
+    <button v-if="!isLiftsEmpty()" v-on:click="pushToHome()">Add Another Exercise</button>
   </div>
 </template>
 
@@ -24,10 +25,12 @@
       return {
         message: "Workout",
         lifts: [],
+        noLiftMessage: ""
       };
     },
     created: function () {
       this.liftIndex();
+      this.isLiftsEmpty();
     },
     methods: {
       liftIndex: function() {
@@ -45,7 +48,16 @@
       pushToHome: function() {
         this.$router.push("/");
       },
-      isLiftsEmpty: function() {}
+      isLiftsEmpty: function() {
+        var lifts = this.lifts
+        if(lifts.length == 0){
+          this.noLiftMessage = "You currently dont have any exercises added to your workout"
+          return true
+        } else {
+          this.noLiftMessage = ""
+          return false
+        }
+      }
     },
   };
 </script>
