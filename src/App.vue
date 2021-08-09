@@ -4,7 +4,7 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/workout">Workout</router-link> | 
       <router-link v-if="!isLoggedIn()" to="/signup">Signup</router-link> | 
-      <router-link v-if="!isLoggedIn()" to="/login">Login</router-link> |
+      <router-link v-if="!isLoggedIn()" to="/login">Login</router-link> 
       <router-link v-if="isLoggedIn()" to="/logout">Logout</router-link> |
       <router-link v-if="isLoggedIn()" to="/profile">Profile</router-link>
       <!-- change to {{user.name}} when making dynamic -->
