@@ -118,7 +118,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Poppins", sans-serif;
   font-size: 15px;
   font-weight: 500;
-  color: #2b3c6f;
+  color: #000000;
   white-space: nowrap;
   transition: 0.3s;
 }
@@ -130,7 +130,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
-  color: #006fbe;
+  color: #be0000;
 }
 
 .navbar .dropdown ul {
