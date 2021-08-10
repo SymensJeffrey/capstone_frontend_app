@@ -14,7 +14,7 @@
           </div>
 
           <!-- Slide 2 -->
-          <div class="carousel-item" style="background-image: url(assets/img/slide/slide-2.jpg)">
+          <div class="carousel-item" style="background-image: url(assets/img/slide/slide-2.jpeg)">
           </div>
 
           <!-- Slide 3 -->
