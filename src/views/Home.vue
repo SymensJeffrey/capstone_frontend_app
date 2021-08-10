@@ -14,7 +14,7 @@
           </div>
 
           <!-- Slide 2 -->
-          <div class="carousel-item" style="background-image: url(assets/img/slide/slide-2.jpeg)">
+          <div class="carousel-item" style="background-image: url(assets/img/slide/slide-2.jpg)">
           </div>
 
           <!-- Slide 3 -->
@@ -34,7 +34,6 @@
       </div>
     </section><!-- End Hero -->
     <hr />
-    
     <div v-for="exercise in exercises">
       <p>ID:{{ exercise.id }}</p>
       <p>Name:{{ exercise.name }}</p>
