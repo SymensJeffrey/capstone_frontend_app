@@ -33,40 +33,47 @@
 
       </div>
     </section><!-- End Hero -->
-    <hr />
-    <div v-for="exercise in exercises">
-      <h3>{{ exercise.name }}</h3>
-      <p><img class id="body-part" v-bind:src="exercise.image_url">
-      <p><button v-on:click="exerciseShow(exercise)"> More Info </button>
-      <button v-on:click="addToWorkoutPopup(exercise)">Add to workout</button> </p>
-      <hr />
-    </div>
-    <dialog id="exercise-details">
-      <form method="dialog">
-        <h2>{{ currentExercise.name }}</h2>
-        <p>Name:{{ currentExercise.name }}</p>
-        <p>Description:{{ currentExercise.description }}</p>
-        <p>Equipment:{{ currentExercise.equipment }}</p>
-        <p>Muscles:{{ currentExercise.category }}</p>
-        <button>Close</button>
-      </form>
-    </dialog>
-    <dialog id="lift-create">
-      <form method="dialog">
-        <h2>Adding {{ currentExercise.name }}</h2>
-        <p> Reps: <input type="number" v-model="newLiftParams.reps"> </p>
-        <p> Weight: <input type="number" v-model="newLiftParams.weight"> </p>
-        <p> Sets: <input type="number" v-model="newLiftParams.sets"> </p>
-        <button>Close</button>
-        <button v-on:click="liftCreate()">Add to Workout</button>
-      </form>
-    </dialog>
+    <section id="features" class="features">
+      <div v-for="exercise in exercises">
+        <div class="col-lg-4 col-md-6 icon-box">
+          <div class="icon">
+            <img class id="body-part" v-bind:src="exercise.image_url">
+          </div>
+          <h4 class="title"><a v-on:click="exerciseShow(exercise)">{{ exercise.name }}</a></h4>
+          <p class="description">
+            <button v-on:click="exerciseShow(exercise)"> More Info </button>
+            <button v-on:click="addToWorkoutPopup(exercise)">Add to workout</button>
+          </p>
+        </div>
+        <hr />
+      </div>
+      <dialog id="exercise-details">
+        <form method="dialog">
+          <h2>{{ currentExercise.name }}</h2>
+          <p>Description:{{ currentExercise.description }}</p>
+          <p>Equipment:{{ currentExercise.equipment }}</p>
+          <p>Muscles:{{ currentExercise.category }}</p>
+          <button>Close</button>
+        </form>
+      </dialog>
+      <dialog id="lift-create">
+        <form method="dialog">
+          <h2>Adding {{ currentExercise.name }}</h2>
+          <p> Reps: <input type="number" v-model="newLiftParams.reps"> </p>
+          <p> Weight: <input type="number" v-model="newLiftParams.weight"> </p>
+          <p> Sets: <input type="number" v-model="newLiftParams.sets"> </p>
+          <button>Close</button>
+          <button v-on:click="liftCreate()">Add to Workout</button>
+        </form>
+      </dialog>
+    </section>
+    
   </div>
 </template>
 
 <style>
 #body-part {
-  width: 200px
+  width: 60px
 }
 </style>
 
