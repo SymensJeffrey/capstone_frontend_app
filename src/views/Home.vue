@@ -35,8 +35,7 @@
     </section><!-- End Hero -->
     <hr />
     <div v-for="exercise in exercises">
-      <p>ID:{{ exercise.id }}</p>
-      <p>Name:{{ exercise.name }}</p>
+      <h6>{{ exercise.name }}</h6>
       <button v-on:click="exerciseShow(exercise)"> More Info </button>
       <button v-on:click="addToWorkoutPopup(exercise)">Add to workout</button> 
       <hr />
@@ -44,7 +43,6 @@
     <dialog id="exercise-details">
       <form method="dialog">
         <h2>{{ currentExercise.name }}</h2>
-        <p>ID:{{ currentExercise.id }}</p>
         <p>Name:{{ currentExercise.name }}</p>
         <p>Description:{{ currentExercise.description }}</p>
         <p>Equipment:{{ currentExercise.equipment }}</p>
