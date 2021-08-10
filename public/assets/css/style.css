@@ -1261,7 +1261,7 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: #1d284b;
+  background: #3d3d3d;
   color: #fff;
   font-size: 14px;
   text-align: center;
@@ -1292,7 +1292,7 @@ section {
 #footer .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: #006fbe;
+  background: #d44c4c;
   color: #fff;
   line-height: 1;
   padding: 8px 0;
@@ -1305,7 +1305,7 @@ section {
 }
 
 #footer .social-links a:hover {
-  background: #007ed8;
+  background: #dd8080;
   color: #fff;
   text-decoration: none;
 }
@@ -1319,10 +1319,10 @@ section {
 }
 
 #footer .credits a {
-  color: #006fbe;
+  color: #d44c4c;
   transition: 0.3s;
 }
 
 #footer .credits a:hover {
-  color: #008df1;
+  color: #dd8080;
 }
