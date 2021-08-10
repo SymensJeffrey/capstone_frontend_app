@@ -81,7 +81,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header .logo a {
-  color: #24325d;
+  color: #000000;
 }
 
 #header .logo img {
@@ -199,7 +199,7 @@ h1, h2, h3, h4, h5, h6 {
 * Mobile Navigation 
 */
 .mobile-nav-toggle {
-  color: #24325d;
+  color: #000000;
   font-size: 28px;
   cursor: pointer;
   display: none;
@@ -254,7 +254,7 @@ h1, h2, h3, h4, h5, h6 {
 .navbar-mobile a {
   padding: 10px 20px;
   font-size: 15px;
-  color: #24325d;
+  color: #000000;
 }
 
 .navbar-mobile a:hover, .navbar-mobile .active, .navbar-mobile li:hover > a {
@@ -913,11 +913,11 @@ section {
   font-weight: 700;
   text-align: center;
   margin-bottom: 20px;
-  color: #24325d;
+  color: #000000;
 }
 
 .event-list .card-title a {
-  color: #24325d;
+  color: #000000;
   transition: 0.3s;
 }
 
@@ -1130,7 +1130,7 @@ section {
   font-size: 22px;
   font-weight: 600;
   margin-bottom: 5px;
-  color: #24325d;
+  color: #000000;
 }
 
 .contact-us .info p {
