@@ -36,7 +36,7 @@
     <hr />
     <div v-for="exercise in exercises">
       <h3>{{ exercise.name }}</h3>
-      <p><img class id="arm" v-bind:src="exercise.image_url">
+      <p><img class id="body-part" v-bind:src="exercise.image_url">
       <p><button v-on:click="exerciseShow(exercise)"> More Info </button>
       <button v-on:click="addToWorkoutPopup(exercise)">Add to workout</button> </p>
       <hr />
@@ -65,7 +65,7 @@
 </template>
 
 <style>
-#arm {
+#body-part {
   width: 200px
 }
 </style>
