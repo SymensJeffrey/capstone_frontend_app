@@ -35,9 +35,10 @@
     </section><!-- End Hero -->
     <hr />
     <div v-for="exercise in exercises">
-      <h6>{{ exercise.name }}</h6>
-      <button v-on:click="exerciseShow(exercise)"> More Info </button>
-      <button v-on:click="addToWorkoutPopup(exercise)">Add to workout</button> 
+      <h3>{{ exercise.name }}</h3>
+      <p><img class id="arm" v-bind:src="exercise.image_url">
+      <p><button v-on:click="exerciseShow(exercise)"> More Info </button>
+      <button v-on:click="addToWorkoutPopup(exercise)">Add to workout</button> </p>
       <hr />
     </div>
     <dialog id="exercise-details">
@@ -63,7 +64,11 @@
   </div>
 </template>
 
-<style></style>
+<style>
+#arm {
+  width: 200px
+}
+</style>
 
 <script>
   import axios from "axios"
