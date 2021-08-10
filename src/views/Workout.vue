@@ -1,6 +1,8 @@
 <template>
   <div class="home">
     <h1>{{ message }}</h1>
+    <br>
+    <br>
     <p><button v-if="!isLiftsEmpty()" v-on:click="workoutCreate()">Finish Workout</button>
     <h2>{{noLiftMessage}}</h2>
     <div v-for="lift in lifts">

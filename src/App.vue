@@ -13,13 +13,13 @@
     <header id="header" class="fixed-top">
       <div class="container d-flex align-items-center justify-content-between">
 
-        <h1 class="logo"><a href="index.html">GYMOLOGY</a></h1>
+        <h1 class="logo"><a href="/">GYMOLOGY</a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
         <nav id="navbar" class="navbar">
           <ul>
-            <li><a class="active" href="index.html">Home</a></li>
+            <li><a class="active" href="/">Home</a></li>
             <li><a href="/workout">Workout</a></li>
             <li v-if="isLoggedIn()"><a href="/profile">Profile</a></li>
             <li v-if="!isLoggedIn()"><a href="/login">Login</a></li>

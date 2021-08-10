@@ -1,5 +1,9 @@
 <template>
   <div class="home">
+    <br>
+    <br>
+    <br>
+    <br>
     <h1>Hello {{ user.name }}</h1>
     <div v-for=" workout in workouts">
       <p>ID: {{ workout.id }}</p>
