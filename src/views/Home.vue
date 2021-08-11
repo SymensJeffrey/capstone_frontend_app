@@ -34,8 +34,9 @@
       </div>
     </section><!-- End Hero -->
     <section id="features" class="features">
+      <p>Search: <input v-model="searchTerm"></p>
       <div class="row g-5">
-        <div class="col-md-4" v-for="exercise in exercises">
+        <div class="col-md-4" v-for="exercise in filterBy(exercises, searchTerm, 'name')">
             <div class="icon-box">
               <div class="icon">
                 <img class id="body-part" v-bind:src="exercise.image_url">
@@ -67,7 +68,6 @@
         </form>
       </dialog>
     </section>
-    
   </div>
 </template>
 
@@ -79,7 +79,9 @@
 
 <script>
   import axios from "axios"
+  import Vue2Filters from "vue2-filters"
   export default {
+    mixins: [Vue2Filters.mixin],
     data: function () {
       return {
         message: "GYMOLOGY",
@@ -88,6 +90,7 @@
         newLiftParams: {},
         currentUser: {},
         lifts: [],
+        searchTerm: ""
       };
     },
     created: function () {
