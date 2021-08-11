@@ -34,18 +34,19 @@
       </div>
     </section><!-- End Hero -->
     <section id="features" class="features">
-      <div v-for="exercise in exercises">
-        <div class="col-lg-4 col-md-6 icon-box">
-          <div class="icon">
-            <img class id="body-part" v-bind:src="exercise.image_url">
-          </div>
-          <h4 class="title"><a v-on:click="exerciseShow(exercise)">{{ exercise.name }}</a></h4>
-          <p class="description">
-            <button v-on:click="exerciseShow(exercise)"> More Info </button>
-            <button v-on:click="addToWorkoutPopup(exercise)">Add to workout</button>
-          </p>
+      <div class="row g-5">
+        <div class="col-md-4" v-for="exercise in exercises">
+            <div class="icon-box">
+              <div class="icon">
+                <img class id="body-part" v-bind:src="exercise.image_url">
+            </div>
+            <h4 class="title"><a v-on:click="exerciseShow(exercise)">{{ exercise.name }}</a></h4>
+            <p class="description">
+              <button v-on:click="exerciseShow(exercise)"> More Info </button>
+              <button v-on:click="addToWorkoutPopup(exercise)">Add to workout</button>
+            </p>
+            </div>
         </div>
-        <hr />
       </div>
       <dialog id="exercise-details">
         <form method="dialog">
