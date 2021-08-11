@@ -42,7 +42,7 @@
             </div>
             <h4 class="title"><a v-on:click="exerciseShow(exercise)">{{ exercise.name }}</a></h4>
             <p class="description">
-              <button v-on:click="addToWorkoutPopup(exercise)">Add to workout</button>
+              <button v-on:click="addToWorkoutPopup(exercise)" class="btn btn-outline-secondary">Add to workout</button>
             </p>
             </div>
         </div>
