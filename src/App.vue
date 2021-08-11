@@ -20,7 +20,7 @@
         <nav id="navbar" class="navbar">
           <ul>
             <li><a class="active" href="/">Home</a></li>
-            <li><a href="/workout">Workout</a></li>
+            <li v-if="isLoggedIn()"><a href="/workout">Workout</a></li>
             <li v-if="isLoggedIn()"><a href="/profile">Profile</a></li>
             <li v-if="!isLoggedIn()"><a href="/login">Login</a></li>
             <li v-if="!isLoggedIn()"><a href="/signup">Signup</a></li>

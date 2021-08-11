@@ -48,13 +48,13 @@
         </div>
       </div>
       <dialog id="exercise-details">
-        <form method="dialog">
-          <h2>{{ currentExercise.name }}</h2>
-          <p>Description:{{ currentExercise.description }}</p>
-          <p>Equipment:{{ currentExercise.equipment }}</p>
-          <p>Muscles:{{ currentExercise.category }}</p>
-          <button>Close</button>
-        </form>
+          <form method="dialog">
+            <h2>{{ currentExercise.name }}</h2>
+            <p>Description:{{ currentExercise.description }}</p>
+            <p>Equipment:{{ currentExercise.equipment }}</p>
+            <p>Muscles:{{ currentExercise.category }}</p>
+            <button>Close</button>
+          </form>
       </dialog>
       <dialog id="lift-create">
         <form method="dialog">
