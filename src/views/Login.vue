@@ -3,7 +3,8 @@
     <br>
     <br>
     <br>
-    <form v-on:submit.prevent="submit()">
+    <br>
+    <!-- <form v-on:submit.prevent="submit()">
       <h1>Login</h1>
       <ul>
         <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
@@ -18,8 +19,50 @@
       </div>
       <input type="submit" value="Submit" />       
       <button v-on:click="pushToSignup()">Signup</button>
-    </form>
+    </form> -->
+
+
+
+    <body>
+      <div class="signin">
+        <div class="back-img">
+          <div class="sign-in-text">
+          </div><!--/.sign-in-text-->
+          <div class="layer">
+          </div><!--/.layer-->
+        </div><!--/.back-img-->
+        <div class="form-section">
+        
+          <form v-on:submit.prevent="submit()">
+            <!--Email-->
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <ul>
+                <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
+              </ul>
+              <!-- <input class="mdl-textfield__input" type="email" id="sample3" v-model="newSessionParams.email"> -->
+               <input type="email" v-model="newSessionParams.email">
+              <label class="mdl-textfield__label" for="sample3"> Email</label>
+            </div>
+            <br/>
+            <br/>
+            <!--Password-->
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <!-- <input pattern=".{8,}" class="mdl-textfield__input" type="password" id="sample3" v-model="newSessionParams.password"> -->
+              <input type="password" v-model="newSessionParams.password">
+              <label class="mdl-textfield__label" for="sample3">Password</label>
+            </div>
+            <br/>
+          </label>
+          </form>
+        </div><!--/.form-section-->
+        
+        <input v-on:click="submit()" value="Sign In" class="sign-in-btn mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--raised mdl-button--colored workout-text-center"/>
+        
+        <!--/button-->
+      </div><!--/.signin-->
+    </body>
   </div>
+  
 </template>
 
 <script>
@@ -34,6 +77,7 @@
     },
     methods: {
       submit: function () {
+        console.log("its working")
         axios
           .post("/sessions", this.newSessionParams)
           .then((response) => {

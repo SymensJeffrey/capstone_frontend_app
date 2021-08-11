@@ -9,6 +9,7 @@
     <br>
     <br>
     <h2>{{noLiftMessage}}</h2>
+    <div class="container">
       <div v-for="lift in lifts">
         <p>
           Name: {{ lift.exercise.name }} |
@@ -18,6 +19,7 @@
         </p>
         <hr />
       </div>
+    </div>
     <br>
     <div class="workout-text-center">
     <button v-if="!isLiftsEmpty()" v-on:click="pushToHome()" class="btn btn-outline-secondary btn-text-center">Add Another Exercise</button>
