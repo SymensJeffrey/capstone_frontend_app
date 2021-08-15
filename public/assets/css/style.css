@@ -8,7 +8,14 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-
+.vertical-center {
+  display: flex;
+  justify-content: center;
+}
+dialog{
+  color: #444444;
+  border: none;
+}
 .form-right-margin{
   margin-right: auto;
 }

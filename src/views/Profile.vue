@@ -10,7 +10,7 @@
       <p><button v-on:click="workoutShow(workout)">View Workout</button></p>
     </div>
     <dialog id="workout-details">
-      <form method="dialog">
+      <form method="dialog" class="lift-create">
         <p> {{currentWorkout.date}} </p>
         <p> {{currentWorkout.lift}} </p>
         <p> {{currentWorkout.exercise}}</p>
