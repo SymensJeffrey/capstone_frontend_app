@@ -8,7 +8,9 @@
     </div>
     <br>
     <br>
-    <h2>{{noLiftMessage}}</h2>
+    <div class="workout-text-center">
+      <h2>{{noLiftMessage}}</h2>
+    </div>
     <div class="container">
       <div v-for="lift in lifts">
         <p>
