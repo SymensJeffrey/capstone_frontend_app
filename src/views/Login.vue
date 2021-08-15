@@ -82,7 +82,6 @@
     },
     methods: {
       submit: function () {
-        console.log("its working")
         axios
           .post("/sessions", this.newSessionParams)
           .then((response) => {
