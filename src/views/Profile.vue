@@ -13,11 +13,15 @@
       <form method="dialog">
         <p> {{currentWorkout.date}} </p>
         <p> {{currentWorkout.lift}} </p>
+        <p> {{currentWorkout.exercise}}</p>
         <div v-for="lift in lifts">
           <p>Name:{{ lift.exercise_id }} |
           Weight:{{lift.weight}} lbs |
           Reps:{{lift.reps}} |
           Sets{{lift.sets}} </p>
+        </div>
+        <div v-for="exercise in exercises">
+          {{exercise.name}}
         </div>
         <button>Close</button>
       </form>
@@ -37,6 +41,7 @@
         user: "",
         currentWorkout: {},
         lifts: [],
+        exercises: [],
       };
     },
     created: function () {
@@ -45,7 +50,6 @@
     },
     methods: {
       workoutIndex: function() {
-        console.log("workout index...")
         axios.get("/workouts").then((response) => {console.log("workout index", response); 
         this.workouts = response.data;
       });
@@ -60,6 +64,7 @@
         axios.get(`/workouts/${workout.id}`).then((response) => {console.log("workoutshow", response);
         this.currentWorkout = response.data;
         this.lifts = this.currentWorkout.lifts
+        this.exercises = this.currentWorkout.exercises
         })
         document.querySelector("#workout-details").showModal();
       },
