@@ -26,7 +26,7 @@
               <div class="word-wrap form-right-margin">
               Weight:{{lift.weight}} lbs |
               Reps:{{lift.reps}} |
-              Sets{{lift.sets}} </div>
+              Sets:{{lift.sets}} </div>
             </div>
           </div>
           </div>
