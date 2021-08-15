@@ -9,7 +9,12 @@
 # General
 --------------------------------------------------------------*/
 
-
+.form-right-margin{
+  margin-right: auto;
+}
+.word-wrap{
+  white-space: nowrap;
+}
 body{
   font-family: 'Roboto', sans-serif;
   background-color: #F5F5F5;

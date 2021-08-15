@@ -14,19 +14,26 @@
         <p> {{currentWorkout.date}} </p>
         <p> {{currentWorkout.lift}} </p>
         <p> {{currentWorkout.exercise}}</p>
-        <div v-for="lift in lifts">
-          <p>Name:{{ lift.exercise_id }} |
-          Weight:{{lift.weight}} lbs |
-          Reps:{{lift.reps}} |
-          Sets{{lift.sets}} </p>
+        <div class="container">
+          <div class="row">
+          <div class="col-lg-6">
+            <div class="word-wrap" v-for="exercise in exercises">
+              <div>{{exercise.name}}</div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div v-for="lift in lifts">
+              <div class="word-wrap form-right-margin">
+              Weight:{{lift.weight}} lbs |
+              Reps:{{lift.reps}} |
+              Sets{{lift.sets}} </div>
+            </div>
+          </div>
+          </div>
+            <button>Close</button>
         </div>
-        <div v-for="exercise in exercises">
-          {{exercise.name}}
-        </div>
-        <button>Close</button>
       </form>
     </dialog>
-    </div>
   </div>
 </template>
 
