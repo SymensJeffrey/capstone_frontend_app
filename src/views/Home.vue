@@ -45,7 +45,7 @@
             </div>
             <h4 class="title"><a v-on:click="exerciseShow(exercise)">{{ exercise.name }}</a></h4>
             <p class="description">
-              <button v-on:click="addToWorkoutPopup(exercise)" class="btn btn-outline-secondary">Add to workout</button>
+              <button v-if="isLoggedIn()" v-on:click="addToWorkoutPopup(exercise)" class="btn btn-outline-secondary round-button">Add to workout</button>
             </p>
             </div>
         </div>
@@ -96,7 +96,9 @@
       };
     },
     created: function () {
-      this.exercisesIndex()
+      this.exercisesIndex();
+      this.isLoggedIn();
+      this.userShow();
     },
     methods: {
       exercisesIndex: function() {
@@ -130,6 +132,18 @@
           this.lifts.push(response.data);
           this.newLiftParams = {};
         })
+      },
+      isLoggedIn: function() {
+      if (localStorage.getItem("jwt")) {
+        return true;
+      } else {
+        return false;
+      }      
+      },
+      userShow: function() {
+        axios.get(`/users/${localStorage.user_id}`).then((response) => {console.log(response)
+        this.user = response.data;
+        });
       },
     },
   };

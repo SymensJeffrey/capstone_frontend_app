@@ -6,18 +6,15 @@
     <br>
     <h1>Hello {{ user.name }}</h1>
     <div v-for=" workout in workouts">
-      <p>ID: {{ workout.id }}</p>
-      <p>User ID: {{ workout.user_id }}</p>
       <p>Date: {{ workout.date }}</p>
       <p><button v-on:click="workoutShow(workout)">View Workout</button></p>
     </div>
     <dialog id="workout-details">
       <form method="dialog">
-        <p> {{currentWorkout.id}} </p>
         <p> {{currentWorkout.date}} </p>
-        <p> {{currentWorkout.lift}}
+        <p> {{currentWorkout.lift}} </p>
         <div v-for="lift in lifts">
-          <p>Name:{{lift.exercise_id}} |
+          <p>Name:{{ lift.exercise_id }} |
           Weight:{{lift.weight}} lbs |
           Reps:{{lift.reps}} |
           Sets{{lift.sets}} </p>
@@ -39,12 +36,12 @@
         workouts: [],
         user: "",
         currentWorkout: {},
-        lifts: []
+        lifts: [],
       };
     },
     created: function () {
-      this.workoutIndex(),
-      this.userShow()
+      this.workoutIndex();
+      this.userShow();
     },
     methods: {
       workoutIndex: function() {
@@ -65,7 +62,7 @@
         this.lifts = this.currentWorkout.lifts
         })
         document.querySelector("#workout-details").showModal();
-      }
+      },
     },
   };
 </script>
