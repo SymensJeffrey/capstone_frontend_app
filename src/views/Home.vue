@@ -34,7 +34,9 @@
       </div>
     </section><!-- End Hero -->
     <section id="features" class="features">
-      <p>Search: <input v-model="searchTerm"></p>
+      <div class="search-bar-padding">
+        <p><input id="search-bar" placeholder="Search" v-model="searchTerm"></p>
+      </div>
       <div class="row g-5">
         <div class="col-md-4" v-for="exercise in filterBy(exercises, searchTerm, 'name')">
             <div class="icon-box">
