@@ -8,6 +8,13 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+.new-workout-input{
+  margin-left: 120px;
+  outline: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
 .vertical-center {
   display: flex;
   justify-content: center;

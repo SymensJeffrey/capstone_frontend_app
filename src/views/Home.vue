@@ -64,9 +64,9 @@
       <dialog id="lift-create">
         <form method="dialog" class="lift-create">
           <h2>Adding {{ currentExercise.name }}</h2>
-          <p> Reps: <input type="number" v-model="newLiftParams.reps"> </p>
-          <p> Weight: <input type="number" v-model="newLiftParams.weight"> </p>
-          <p> Sets: <input type="number" v-model="newLiftParams.sets"> </p>
+          <p><input type="number" v-model="newLiftParams.reps" class="new-workout-input">Reps</p>
+          <p><input type="number" v-model="newLiftParams.weight" class="new-workout-input"> Weight</p>
+          <p><input type="number" v-model="newLiftParams.sets" class="new-workout-input"> Sets</p>
           <div class="vertical-center">
             <button v-on:click="liftCreate()" class="btn btn-outline-secondary round-button">Add to Workout</button>
             <button class="btn btn-outline-secondary round-button">Close</button>
