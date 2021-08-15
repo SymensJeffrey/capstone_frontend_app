@@ -52,6 +52,12 @@
               </div>
             </div>
             <br/>
+            <br/>
+            <br/>
+            <div class="sign-up-push">
+              <p>Dont have and account?</p>
+              <a id="a-signup"href="/signup">Sign Up</a>
+            </div>
           </form>
         </div><!--/.form-section-->
         
