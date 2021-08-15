@@ -35,28 +35,27 @@
         
           <form v-on:submit.prevent="submit()">
             <!--Email-->
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-              <ul>
-                <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
-              </ul>
-              <!-- <input class="mdl-textfield__input" type="email" id="sample3" v-model="newSessionParams.email"> -->
-               <input type="email" v-model="newSessionParams.email">
-              <label class="mdl-textfield__label" for="sample3"> Email</label>
+            <div class="float-center">
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <ul>
+                  <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
+                </ul>
+                <!-- <input class="mdl-textfield__input" type="email" id="sample3" v-model="newSessionParams.email"> -->
+                <input class="sigin-input" type="email" placeholder="Email" v-model="newSessionParams.email">
+              </div>
+              <br/>
+              <br/>
+              <!--Password-->
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <!-- <input pattern=".{8,}" class="mdl-textfield__input" type="password" id="sample3" v-model="newSessionParams.password"> -->
+                <input class="sigin-input" type="password" placeholder="Password" v-model="newSessionParams.password">
+              </div>
             </div>
             <br/>
-            <br/>
-            <!--Password-->
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-              <!-- <input pattern=".{8,}" class="mdl-textfield__input" type="password" id="sample3" v-model="newSessionParams.password"> -->
-              <input type="password" v-model="newSessionParams.password">
-              <label class="mdl-textfield__label" for="sample3">Password</label>
-            </div>
-            <br/>
-          </label>
           </form>
         </div><!--/.form-section-->
         
-        <input v-on:click="submit()" value="Sign In" class="sign-in-btn mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--raised mdl-button--colored workout-text-center"/>
+        <input id="signin-button" v-on:click="submit()" value="Sign In" class="sign-in-btn mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--raised mdl-button--colored workout-text-center"/>
         
         <!--/button-->
       </div><!--/.signin-->

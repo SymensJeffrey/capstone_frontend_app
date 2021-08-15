@@ -15,6 +15,21 @@ body{
   background-color: #F5F5F5;
 }
 /*Sign In Form*/
+.sigin-input {
+  width: 100%;
+  outline: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1.5px solid #5a5a5a;
+  background: transparent;
+}
+
+#signin-button {
+  outline: none;
+  border: none;
+}
+
 .signin{
   position: relative;
   height: 700px;
@@ -114,6 +129,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .workout-text-center{
 	text-align: center;
+}
+
+.float-center {
+  float: center;
 }
 
 #search-bar {
