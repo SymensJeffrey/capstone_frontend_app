@@ -7,7 +7,7 @@
     <h1>Hello {{ user.name }}</h1>
     <div v-for=" workout in workouts">
       <p>Date: {{ workout.date }}</p>
-      <p><button v-on:click="workoutShow(workout)">View Workout</button></p>
+      <p><button v-on:click="workoutShow(workout)" class="btn btn-outline-secondary round-button">View Workout</button></p>
     </div>
     <dialog id="workout-details">
       <form method="dialog" class="lift-create">
@@ -30,7 +30,7 @@
             </div>
           </div>
           </div>
-            <button>Close</button>
+            <button class="btn btn-outline-secondary round-button">Close</button>
         </div>
       </form>
     </dialog>
