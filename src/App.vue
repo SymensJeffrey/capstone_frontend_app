@@ -43,7 +43,7 @@
             </li> -->
             <li v-if="isLoggedIn()"><a href="/logout">Logout</a></li>
           </ul>
-          <i class="bi bi-list mobile-nav-toggle"></i>
+          <i class="bi bi-list mobile-nav-toggle" v-on:click="openNavBar()"></i>
         </nav><!-- .navbar -->
 
       </div>
@@ -78,6 +78,7 @@
 </style>
 
 <script>
+
 import axios from "axios"
   export default {
     data: function () {
@@ -103,6 +104,9 @@ import axios from "axios"
         this.user = response.data;
         });
       },
+      openNavBar: function() {
+        document.querySelector('#navbar').classList.toggle('navbar-mobile')
+      }
     },
   };
 </script>
