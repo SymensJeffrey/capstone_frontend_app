@@ -62,7 +62,7 @@
           </form>
       </dialog>
       <dialog id="lift-create">
-        <form method="dialog" class="lift-create">
+        <form method="dialog" class="float-center">
           <h2>Adding {{ currentExercise.name }}</h2>
           <p><input type="number" v-model="newLiftParams.reps" class="new-workout-input">Reps</p>
           <p><input type="number" v-model="newLiftParams.weight" class="new-workout-input"> Weight</p>
