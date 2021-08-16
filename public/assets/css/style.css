@@ -8,6 +8,12 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+.white-background{
+  background: white;
+}
+.black-background{
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapercave.com%2Fwp%2Fwp3516810.jpg&f=1&nofb=1");
+}
 .new-workout-input{
   margin-left: 120px;
   outline: none;

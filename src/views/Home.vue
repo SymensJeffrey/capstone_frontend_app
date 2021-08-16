@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="home black-background">
     <br>
     <br>
     <section id="hero">
@@ -33,6 +33,7 @@
 
       </div>
     </section><!-- End Hero -->
+    <div class="container white-background">
     <section id="features" class="features">
       <div class="search-bar-padding">
         <p><input id="search-bar" placeholder="Search" v-model="searchTerm"></p>
@@ -74,6 +75,7 @@
         </form>
       </dialog>
     </section>
+  </div>
   </div>
 </template>
 
