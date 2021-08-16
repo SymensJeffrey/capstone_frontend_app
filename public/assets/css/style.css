@@ -8,11 +8,22 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+body, html {
+  height: 100%;
+}
+.button-margin{
+  margin: 10px;
+}
+.align-right{
+  float: right;
+
+}
 .white-background{
   background: white;
 }
 .black-background{
   background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapercave.com%2Fwp%2Fwp3516810.jpg&f=1&nofb=1");
+  height: 100%;
 }
 .new-workout-input{
   margin-left: 120px;
@@ -38,6 +49,7 @@ dialog{
 body{
   font-family: 'Roboto', sans-serif;
   background-color: #F5F5F5;
+  height: 100%;
 }
 /*Sign In Form*/
 .sign-up-push {
