@@ -19,7 +19,7 @@
           <h5 class="card-header">{{ lift.exercise.name }}</h5>
           <div class="card-body">
             <h5 class="card-title">Reps: {{ lift.reps }} | Weight: {{ lift.weight }}lbs | Sets: {{ lift.sets}}
-            <button class="btn btn-outline-secondary round-button align-right">X</button>
+            <button class="btn btn-outline-secondary round-button align-right" v-on:click="liftDelete(lift)">X</button>
             </h5>
           </div>
         </div>
@@ -70,7 +70,14 @@
           this.noLiftMessage = ""
           return false
         }
-      }
+      },
+      liftDelete: function(lift) {
+        axios.delete("lifts/" + lift.id).then((response) => {
+          console.log("lift delete", response); 
+          var index = this.lifts.indexOf(lift);
+          this.lifts.splice(index, 1);
+        })
+      },
     },
   };
 </script>
