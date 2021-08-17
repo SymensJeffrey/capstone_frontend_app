@@ -39,7 +39,7 @@
         <p><input id="search-bar" placeholder="Search" v-model="searchTerm"></p>
       </div>
       <div class="row g-5">
-        <div class="col-md-4" v-for="exercise in filterBy(exercises, searchTerm, 'name')">
+        <div data-aos="slide-up" class="col-md-4" v-for="exercise in filterBy(exercises, searchTerm, 'name')">
             <div class="icon-box">
               <div class="icon">
                 <img class id="body-part" v-bind:src="exercise.image_url">
