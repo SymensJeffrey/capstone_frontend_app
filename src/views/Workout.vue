@@ -1,31 +1,33 @@
 <template>
   <div class="home">
-    <div class="container"
-    <h1>{{ message }}</h1>
-    <br>
-    <br>
-    <div class="workout-text-center">
-    <button v-if="!isLiftsEmpty()" v-on:click="workoutCreate()" class="btn btn-outline-secondary button-margin">Finish Workout</button>
-    <button v-if="!isLiftsEmpty()" v-on:click="pushToHome()" class="btn btn-outline-secondary btn-text-center">Add Another Exercise</button>
-    </div>
-    <br>
-    <br>
-    <div class="workout-text-center">
-      <h2>{{noLiftMessage}}</h2>
-    </div>
     <div class="container">
-      <div v-for="lift in lifts">
-        <div class="card">
-          <h5 class="card-header">{{ lift.exercise.name }}</h5>
-          <div class="card-body">
-            <h5 class="card-title">Reps: {{ lift.reps }} | Weight: {{ lift.weight }}lbs | Sets: {{ lift.sets}}
-            <button class="btn btn-outline-secondary round-button align-right" v-on:click="liftDelete(lift)">X</button>
-            </h5>
+      <h1>{{ message }}</h1>
+      <br>
+      <br>
+      <div class="workout-text-center">
+      <button v-if="!isLiftsEmpty()" v-on:click="workoutCreate()" class="btn btn-outline-secondary button-margin">Finish Workout</button>
+      <button v-if="!isLiftsEmpty()" v-on:click="pushToHome()" class="btn btn-outline-secondary btn-text-center">Add Another Exercise</button>
+      </div>
+      <br>
+      <br>
+      <div class="workout-text-center">
+        <h2>{{noLiftMessage}}</h2>
+      </div>
+      <div class="container">
+        <div v-for="lift in lifts">
+          <div class="card">
+            <h5 class="card-header">{{ lift.exercise.name }}</h5>
+            <div class="card-body">
+              <h5 class="card-title">Reps: {{ lift.reps }} | Weight: {{ lift.weight }}lbs | Sets: {{ lift.sets}}
+              <button class="btn btn-outline-secondary round-button align-right" v-on:click="liftDelete(lift)">X</button>
+              </h5>
+            </div>
           </div>
+          <br>
         </div>
       </div>
+      <br>
     </div>
-    <br>
   </div>
 </template>
 
