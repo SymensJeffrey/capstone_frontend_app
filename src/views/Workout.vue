@@ -15,7 +15,7 @@
       </div>
       <div class="container">
         <div v-for="lift in lifts">
-          <div class="card">
+          <div class="card border-secondary mb-3">
             <h5 class="card-header">{{ lift.exercise.name }}</h5>
             <div class="card-body">
               <h5 class="card-title">Reps: {{ lift.reps }} | Weight: {{ lift.weight }}lbs | Sets: {{ lift.sets}}
