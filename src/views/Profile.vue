@@ -4,7 +4,7 @@
     <br>
     <br>
     <br>
-    <h1>Hello {{ user.name }}</h1>
+    <h1 class="vertical-center">Hello {{ user.name }}</h1>
     <div v-for=" workout in workouts">
       <p>Date: {{ workout.date }}</p>
       <p><button v-on:click="workoutShow(workout)" class="btn btn-outline-secondary round-button">View Workout</button></p>
