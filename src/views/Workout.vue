@@ -5,8 +5,8 @@
       <br>
       <br>
       <div class="workout-text-center">
-      <button v-if="!isLiftsEmpty()" v-on:click="workoutCreate()" class="btn btn-outline-secondary button-margin">Finish Workout</button>
-      <button v-if="!isLiftsEmpty()" v-on:click="pushToHome()" class="btn btn-outline-secondary btn-text-center">Add Another Exercise</button>
+        <button v-if="!isLiftsEmpty()" v-on:click="workoutCreate()" class="btn btn-outline-secondary button-margin">Finish Workout</button>
+        <button v-if="!isLiftsEmpty()" v-on:click="pushToHome()" class="btn btn-outline-secondary btn-text-center">Add Another Exercise</button>
       </div>
       <br>
       <br>
@@ -15,7 +15,7 @@
       </div>
       <div class="container">
         <div v-for="lift in lifts">
-          <div class="card border-secondary mb-3">
+          <div class="card border-secondary mb-3 workout-card-width">
             <h5 class="card-header">{{ lift.exercise.name }}</h5>
             <div class="card-body">
               <h5 class="card-title">Reps: {{ lift.reps }} | Weight: {{ lift.weight }}lbs | Sets: {{ lift.sets}}
