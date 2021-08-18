@@ -5,35 +5,20 @@
     <br>
     <br>
     <h1 class="vertical-center">Hello {{ user.name }}</h1>
-    <div v-for=" workout in workouts">
-      <p>Date: {{ workout.date }}</p>
-      <p><button v-on:click="workoutShow(workout)" class="btn btn-outline-secondary round-button">View Workout</button></p>
-    </div>
-    <dialog id="workout-details">
-      <form method="dialog" class="lift-create">
-        <p> {{currentWorkout.date}} </p>
-        <p> {{currentWorkout.lift}} </p>
-        <p> {{currentWorkout.exercise}}</p>
-        <div class="container">
-          <div class="row">
-          <div class="col-lg-6">
-            <div class="word-wrap" v-for="exercise in exercises">
-              <div>{{exercise.name}}</div>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div v-for="lift in lifts">
-              <div class="word-wrap form-right-margin">
-              Weight:{{lift.weight}} lbs |
-              Reps:{{lift.reps}} |
-              Sets:{{lift.sets}} </div>
-            </div>
-          </div>
-          </div>
-            <button class="btn btn-outline-secondary round-button">Close</button>
+    <div class="container">
+      <div v-for=" workout in workouts">
+        <p>Date: {{ workout.date }} </p>
+        <div v-for="lift in workout.lifts">
+          Reps: {{lift.reps}}
+          Weight: {{lift.weight}}
+          Sets: {{lift.sets}}
         </div>
-      </form>
-    </dialog>
+        <div v-for="exercise in workout.exercises">
+          {{exercise.name}}
+        </div>
+        <hr>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -66,15 +51,15 @@
         this.user = response.data;
         });
       },
-      workoutShow: function(workout) {
-        this.currentWorkout = workout
-        axios.get(`/workouts/${workout.id}`).then((response) => {console.log("workoutshow", response);
-        this.currentWorkout = response.data;
-        this.lifts = this.currentWorkout.lifts
-        this.exercises = this.currentWorkout.exercises
-        })
-        document.querySelector("#workout-details").showModal();
-      },
+      // workoutShow: function(workout) {
+      //   this.currentWorkout = workout
+      //   axios.get(`/workouts/${workout.id}`).then((response) => {console.log("workoutshow", response);
+      //   this.currentWorkout = response.data;
+      //   this.lifts = this.currentWorkout.lifts
+      //   this.exercises = this.currentWorkout.exercises
+      //   })
+      //   document.querySelector("#workout-details").showModal();
+      // },
     },
   };
 </script>
