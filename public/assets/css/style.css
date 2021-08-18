@@ -8,8 +8,13 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-.text-align-left{
-  text-align: left;
+.lifts-params{
+  padding-left: 10px;
+}
+.exercise-names{
+  color:rgb(224, 75, 75);
+  text-align: right;
+  padding-right: 0%;
 }
 .workout-card-width{
   width: 60%;

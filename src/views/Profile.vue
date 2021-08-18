@@ -8,13 +8,19 @@
     <div class="container">
       <div v-for=" workout in workouts">
         <p>Date: {{ workout.date }} </p>
-        <div v-for="lift in workout.lifts">
-          Reps: {{lift.reps}}
-          Weight: {{lift.weight}}
-          Sets: {{lift.sets}}
-        </div>
-        <div v-for="exercise in workout.exercises">
-          {{exercise.name}}
+        <div class="row">
+          <div class="col exercise-names">
+            <div v-for="exercise in workout.exercises">
+              {{exercise.name}} 
+            </div>
+          </div>
+          <div class="col lifts-params">
+            <div v-for="lift in workout.lifts">
+              Weight: {{lift.weight}} |
+              Reps: {{lift.reps}} | 
+              Sets: {{lift.sets}} |
+            </div>
+          </div>
         </div>
         <hr>
       </div>
