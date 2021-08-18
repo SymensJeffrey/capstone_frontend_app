@@ -55,8 +55,7 @@
           <form method="dialog" class="float-center">
             <h2 class="vertical-center">{{ currentExercise.name }}</h2>
             <p>Description:{{ currentExercise.description }}</p>
-            <p>Equipment:{{ currentExercise.equipment }}</p>
-            <p>Muscles:{{ currentExercise.category }}</p>
+            <p>Muscles: {{ currentExercise.muscle }}</p>
             <div class="vertical-center">
               <button class="btn btn-outline-secondary round-button">Close</button>
             </div>
