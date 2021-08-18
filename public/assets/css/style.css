@@ -8,6 +8,13 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+.input-content {
+  text-align: center;
+}
+dialog {
+  border-radius: 5px;
+  box-shadow:0 5px 10px rgba(0,0,0,0.3);
+}
 .lifts-params{
   padding-left: 10px;
 }
@@ -36,7 +43,8 @@ body, html {
   height: 100%;
 }
 .new-workout-input{
-  margin-left: 120px;
+  text-align: center;
+  width: 75px;
   outline: none;
   border-top: none;
   border-left: none;

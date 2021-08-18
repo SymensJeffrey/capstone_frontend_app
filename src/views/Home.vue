@@ -52,8 +52,8 @@
         </div>
       </div>
       <dialog id="exercise-details">
-          <form method="dialog">
-            <h2>{{ currentExercise.name }}</h2>
+          <form method="dialog" class="float-center">
+            <h2 class="vertical-center">{{ currentExercise.name }}</h2>
             <p>Description:{{ currentExercise.description }}</p>
             <p>Equipment:{{ currentExercise.equipment }}</p>
             <p>Muscles:{{ currentExercise.category }}</p>
@@ -63,11 +63,13 @@
           </form>
       </dialog>
       <dialog id="lift-create">
-        <form method="dialog" class="float-center">
-          <h2>Adding {{ currentExercise.name }}</h2>
+        <form method="dialog">
+          <div class="input-content">
+          <h2>{{ currentExercise.name }}</h2>
           <p><input type="number" v-model="newLiftParams.reps" class="new-workout-input">Reps</p>
           <p><input type="number" v-model="newLiftParams.weight" class="new-workout-input"> Weight</p>
           <p><input type="number" v-model="newLiftParams.sets" class="new-workout-input"> Sets</p>
+          </div>
           <div class="vertical-center">
             <button v-on:click="liftCreate()" class="btn btn-outline-secondary round-button">Add to Workout</button>
             <button class="btn btn-outline-secondary round-button">Close</button>
