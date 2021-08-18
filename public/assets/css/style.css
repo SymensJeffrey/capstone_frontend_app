@@ -57,7 +57,7 @@ dialog{
   white-space: nowrap;
 }
 body{
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif;
   background-color: #F5F5F5;
   height: 100%;
 }
@@ -119,7 +119,7 @@ body{
   top: 175px;
   position: absolute;
   z-index: 1;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 h2 {
   padding-left: 15px;
@@ -127,7 +127,7 @@ h2 {
   text-transform: uppercase;
   display: inline-block;
   font-weight: 300;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 .point{
   position: absolute;
@@ -161,11 +161,11 @@ h2 {
   background-color: rgb(182, 33, 33);
   color: rgb(0, 0, 0);
   font-weight: 800;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: #444444;
 }
 
@@ -180,7 +180,7 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .workout-text-center{
@@ -299,7 +299,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: space-between;
   padding: 10px 0 10px 30px;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 15px;
   font-weight: 500;
   color: #444444;
@@ -593,7 +593,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero .btn-get-started {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 500;
   font-size: 14px;
   letter-spacing: 1px;
@@ -734,7 +734,7 @@ section {
 }
 
 .about .content .btn-learn-more {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 600;
   font-size: 14px;
   letter-spacing: 1px;
@@ -1468,7 +1468,7 @@ section {
   font-weight: 700;
   color: #fff;
   position: relative;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   padding: 0;
   margin: 0 0 15px 0;
 }
