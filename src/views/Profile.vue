@@ -5,24 +5,29 @@
     <br>
     <br>
     <h1 class="vertical-center">Hello {{ user.name }}</h1>
+    <br>
+    <br>
     <div class="container">
       <div v-for=" workout in workouts">
-        <p>Date: {{ workout.date }} </p>
-        <div class="row">
-          <div class="col exercise-names">
-            <div v-for="exercise in workout.exercises">
-              {{exercise.name}} 
-            </div>
-          </div>
-          <div class="col lifts-params">
-            <div v-for="lift in workout.lifts">
-              Weight: {{lift.weight}} |
-              Reps: {{lift.reps}} | 
-              Sets: {{lift.sets}} |
+        <div class="card border-secondary mb-3">
+        <h5 class="card-header">{{ workout.date }}</h5>
+          <div class="card-body">
+            <div class="row">
+              <div class="col exercise-names">
+                <div v-for="exercise in workout.exercises">
+                  {{exercise.name}} 
+                </div>
+              </div>
+              <div class="col lifts-params">
+                <div v-for="lift in workout.lifts">
+                  Weight: {{lift.weight}} |
+                  Reps: {{lift.reps}} | 
+                  Sets: {{lift.sets}} |
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <hr>
       </div>
     </div>
   </div>
