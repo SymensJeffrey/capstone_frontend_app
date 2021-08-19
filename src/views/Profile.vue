@@ -64,15 +64,6 @@
         this.user = response.data;
         });
       },
-      // workoutShow: function(workout) {
-      //   this.currentWorkout = workout
-      //   axios.get(`/workouts/${workout.id}`).then((response) => {console.log("workoutshow", response);
-      //   this.currentWorkout = response.data;
-      //   this.lifts = this.currentWorkout.lifts
-      //   this.exercises = this.currentWorkout.exercises
-      //   })
-      //   document.querySelector("#workout-details").showModal();
-      // },
     },
   };
 </script>
