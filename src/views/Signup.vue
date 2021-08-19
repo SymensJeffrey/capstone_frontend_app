@@ -63,8 +63,9 @@
             </div>
           </form>
         </div><!--/.form-section-->
-        
-        <input id="signin-button" v-on:click="submit()" value="Sign Up" class="sign-in-btn mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--raised mdl-button--colored workout-text-center"/>
+        <div class="workout-text-center">
+          <button v-on:click="submit()" class="sign-in-button btn btn-outline-secondary">Create Account</button>
+        </div>
   </div>
 </body>
   
