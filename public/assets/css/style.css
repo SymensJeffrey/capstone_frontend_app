@@ -8,6 +8,7 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+
 .input-content {
   text-align: center;
 }
@@ -26,8 +27,11 @@ dialog {
 .workout-card-width{
   width: 60%;
 }
-body, html {
+html, body {
   height: 100%;
+}
+body {
+  min-height: 100%;
 }
 .button-margin{
   margin: 10px;
@@ -37,10 +41,11 @@ body, html {
 }
 .white-background{
   background: white;
+  min-height: 100vh;
 }
 .black-background{
   background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapercave.com%2Fwp%2Fwp3516810.jpg&f=1&nofb=1");
-  height: 100%;
+  min-height: 100vh;
 }
 .new-workout-input{
   text-align: center;
