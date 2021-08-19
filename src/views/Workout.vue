@@ -1,6 +1,6 @@
 <template>
-  <div class="home">
-    <div class="container">
+  <div class="home black-background">
+    <div class="container white-background">
       <h1>{{ message }}</h1>
       <br>
       <br>
