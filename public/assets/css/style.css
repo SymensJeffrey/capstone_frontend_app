@@ -9,6 +9,10 @@
 # General
 --------------------------------------------------------------*/
 
+.sign-in-button{
+  width: 40%;
+  font-size: larger;
+}
 .input-content {
   text-align: center;
 }

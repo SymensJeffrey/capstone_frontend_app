@@ -53,15 +53,15 @@
             </div>
             <br/>
             <br/>
-            <br/>
             <div class="sign-up-push">
               <p>Dont have and account?</p>
               <a id="a-signup"href="/signup">Sign Up</a>
             </div>
           </form>
         </div><!--/.form-section-->
-        
-        <input id="signin-button" v-on:click="submit()" value="Sign In" class="sign-in-btn mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--raised mdl-button--colored workout-text-center"/>
+        <div class="workout-text-center">
+          <button v-on:click="submit()" class="sign-in-button btn btn-outline-secondary">Sign in</button>
+        </div>
         
         <!--/button-->
       </div><!--/.signin-->
