@@ -4,25 +4,6 @@
     <br>
     <br>
     <br>
-    <!-- <form v-on:submit.prevent="submit()">
-      <h1>Login</h1>
-      <ul>
-        <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
-      </ul>
-      <div>
-        <label>Email:</label>
-        <input type="email" v-model="newSessionParams.email" />
-      </div>
-      <div>
-        <label>Password:</label>
-        <input type="password" v-model="newSessionParams.password" />
-      </div>
-      <input type="submit" value="Submit" />       
-      <button v-on:click="pushToSignup()">Signup</button>
-    </form> -->
-
-
-
     <body>
       <div class="signin">
         <div class="back-img">
@@ -40,14 +21,12 @@
                 <ul>
                   <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
                 </ul>
-                <!-- <input class="mdl-textfield__input" type="email" id="sample3" v-model="newSessionParams.email"> -->
                 <input class="sigin-input" type="email" placeholder="Email" v-model="newSessionParams.email">
               </div>
               <br/>
               <br/>
               <!--Password-->
               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                <!-- <input pattern=".{8,}" class="mdl-textfield__input" type="password" id="sample3" v-model="newSessionParams.password"> -->
                 <input class="sigin-input" type="password" placeholder="Password" v-model="newSessionParams.password">
               </div>
             </div>
@@ -62,7 +41,6 @@
         <div class="workout-text-center">
           <button v-on:click="submit()" class="sign-in-button btn btn-outline-secondary">Sign in</button>
         </div>
-        
         <!--/button-->
       </div><!--/.signin-->
     </body>

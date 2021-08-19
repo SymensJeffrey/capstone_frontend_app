@@ -105,6 +105,12 @@ body{
 
 .signin{
   position: relative;
+  height: 700px;
+  width: 500px;
+  margin: auto;
+  box-shadow: 0px 30px 125px -5px #000;}
+.signup{
+  position: relative;
   height: 740px;
   width: 500px;
   margin: auto;

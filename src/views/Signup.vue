@@ -1,6 +1,10 @@
 <template>
 <body>
-  <div class="signin">
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="signup">
     <div class="back-img">
           <div class="sign-in-text">
           </div><!--/.sign-in-text-->
