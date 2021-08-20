@@ -75,9 +75,21 @@
         <form method="dialog">
           <div class="input-content">
           <h2>{{ currentExercise.name }}</h2>
-          <p><input type="number" v-model="newLiftParams.reps" class="new-workout-input">Reps</p>
-          <p><input type="number" v-model="newLiftParams.weight" class="new-workout-input"> Weight</p>
-          <p><input type="number" v-model="newLiftParams.sets" class="new-workout-input"> Sets</p>
+          <p>
+              <button v-on:click.prevent="Default()" v-on:click="newLiftParams.reps -= 1" class="btn up-down-button" data-toggle="">-</button>
+              <button v-on:click.prevent="Default()" v-on:click="newLiftParams.reps += 1" class="btn up-down-button" data-toggle="">+</button>
+            <input type="number" v-model="newLiftParams.reps" class="new-workout-input">Reps
+          </p>
+          <p>
+            <button v-on:click.prevent="Default()" v-on:click="newLiftParams.weight -= 5" class="btn up-down-button" data-toggle="">-</button>
+            <button v-on:click.prevent="Default()" v-on:click="newLiftParams.weight += 5" class="btn up-down-button" data-toggle="">+</button>
+            <input type="number" v-model="newLiftParams.weight" class="new-workout-input"> Weight
+          </p>
+          <p>
+            <button v-on:click.prevent="Default()" v-on:click="newLiftParams.sets -= 1" class="btn up-down-button" data-toggle="">-</button>
+            <button v-on:click.prevent="Default()" v-on:click="newLiftParams.sets += 1" class="btn up-down-button" data-toggle="">+</button>
+            <input type="number" v-model="newLiftParams.sets" class="new-workout-input"> Sets
+          </p>
           </div>
           <div class="vertical-center">
             <button v-on:click="liftCreate()" class="btn btn-outline-secondary">Add to Workout</button>
@@ -106,7 +118,7 @@
         message: "GYMOLOGY",
         exercises: [],
         currentExercise: {},
-        newLiftParams: {},
+        newLiftParams: {reps:0, weight:0, sets:0},
         currentUser: {},
         lifts: [],
         searchTerm: "",
@@ -147,8 +159,9 @@
         axios.post("/lifts", LiftParams).then(response => {
           console.log(response.data);
           this.lifts.push(response.data);
-          this.newLiftParams = {};
+          this.newLiftParams = {reps:0, weight:0, sets:0}
         })
+        
       },
       isLoggedIn: function() {
       if (localStorage.getItem("jwt")) {
@@ -246,6 +259,16 @@
           document.getElementById('calves').setAttribute("class", "btn btn-outline-secondary");
         }
       },
+      increaseReps: function() {
+
+        console.log(this.newLiftParams)
+      },
+      decreaseReps: function() {
+        console.log("decrease")
+        console.log(this.newLiftParams)
+      },
+      Default: function () {
+      }
     },
   };
 </script>
