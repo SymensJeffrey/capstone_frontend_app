@@ -8,7 +8,6 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-
 .sign-in-button{
   width: 40%;
   font-size: larger;
@@ -665,13 +664,21 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
+
+
+.button-active{
+  background-color: rgb(197, 105, 105);
+}
 .btn-outline-secondary{
-  color:#444444
+  color:#444444;
+  box-shadow: none;
+  margin-left: 1em;
 }
 .btn-outline-secondary:hover{
   background: white;
   color:rgb(224, 75, 75);
   border-color: rgb(224, 75, 75);
+  box-shadow: none;
 }
 section {
   padding: 60px 0;

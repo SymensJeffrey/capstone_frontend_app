@@ -38,15 +38,25 @@
       <div class="search-bar-padding">
         <p><input id="search-bar" placeholder="Search" v-model="searchTerm"></p>
       </div>
+      <div class="workout-text-center">
+        <button id="arm" v-on:click="changeCSSarm(),showArms()" class="btn btn-outline-secondary">Arms</button>
+        <button id="back" v-on:click="changeCSSback(),showBack()" class="btn btn-outline-secondary">Back</button>
+        <button id="leg" v-on:click="changeCSSleg(),showLegs()" class="btn btn-outline-secondary">Legs</button>
+        <button id="chest" v-on:click="changeCSSchest(),showChest()" class="btn btn-outline-secondary">Chest</button>
+        <button id="abs" v-on:click="changeCSSabs(),showAbs()" class="btn btn-outline-secondary">Abs</button>
+        <button id="calves" v-on:click="changeCSScalves(),showCalves()" class="btn btn-outline-secondary">Calves</button>
+      </div>
+      <br>
+      <br>
       <div class="row g-5">
-        <div data-aos="slide-up" class="col-md-4" v-for="exercise in filterBy(exercises, searchTerm, 'name')">
+        <div data-aos="slide-up" class="col-md-4" v-for="exercise in filterBy(exercises, searchTerm  || muscleGroup, 'name', 'muscle')">
             <div class="icon-box">
               <div class="icon">
                 <img class id="body-part" v-bind:src="exercise.image_url">
             </div>
             <h4 class="title"><a v-on:click="exerciseShow(exercise)">{{ exercise.name }}</a></h4>
             <p class="description">
-              <button v-if="isLoggedIn()" v-on:click="addToWorkoutPopup(exercise)" class="btn btn-outline-secondary round-button">Add to workout</button>
+              <button v-if="isLoggedIn()" v-on:click="addToWorkoutPopup(exercise)" class="btn btn-outline-secondary">Add to workout</button>
             </p>
             </div>
         </div>
@@ -57,7 +67,7 @@
             <p>Description:{{ currentExercise.description }}</p>
             <p>Muscles: {{ currentExercise.muscle }}</p>
             <div class="vertical-center">
-              <button class="btn btn-outline-secondary round-button">Close</button>
+              <button class="btn btn-outline-secondary">Close</button>
             </div>
           </form>
       </dialog>
@@ -70,8 +80,8 @@
           <p><input type="number" v-model="newLiftParams.sets" class="new-workout-input"> Sets</p>
           </div>
           <div class="vertical-center">
-            <button v-on:click="liftCreate()" class="btn btn-outline-secondary round-button">Add to Workout</button>
-            <button class="btn btn-outline-secondary round-button">Close</button>
+            <button v-on:click="liftCreate()" class="btn btn-outline-secondary">Add to Workout</button>
+            <button class="btn btn-outline-secondary">Close</button>
           </div>
         </form>
       </dialog>
@@ -99,7 +109,8 @@
         newLiftParams: {},
         currentUser: {},
         lifts: [],
-        searchTerm: ""
+        searchTerm: "",
+        muscleGroup: "",
       };
     },
     created: function () {
@@ -109,7 +120,6 @@
     },
     methods: {
       exercisesIndex: function() {
-        console.log("indexing...")
         axios.get("/exercises").then((response) => {console.log("exercises index", response); 
         this.exercises = response.data;
       });
@@ -151,6 +161,90 @@
         axios.get(`/users/${localStorage.user_id}`).then((response) => {console.log(response)
         this.user = response.data;
         });
+      },
+      showArms: function() {
+        if (this.muscleGroup == ""){
+        this.muscleGroup = "arms"
+        } else {
+          this.muscleGroup = ""
+        }
+      },
+      showBack: function() {
+        if (this.muscleGroup == ""){
+        this.muscleGroup = "back"
+        } else {
+          this.muscleGroup = ""
+        }
+      },
+      showLegs: function() {
+        if (this.muscleGroup == ""){
+        this.muscleGroup = "legs"
+        } else {
+          this.muscleGroup = ""
+        }
+      },
+      showChest: function() {
+        if (this.muscleGroup == ""){
+        this.muscleGroup = "chest"
+        } else {
+          this.muscleGroup = ""
+        }
+      },
+      showAbs: function() {
+        if (this.muscleGroup == ""){
+        this.muscleGroup = "abs"
+        } else {
+          this.muscleGroup = ""
+        }
+      },
+      showCalves: function() {
+        if (this.muscleGroup == ""){
+        this.muscleGroup = "calf"
+        } else {
+          this.muscleGroup = ""
+        }
+      },
+      changeCSSarm: function() {
+        if (this.muscleGroup == ""){
+          document.getElementById('arm').setAttribute("class", "btn btn-outline-secondary button-active");
+        } else {
+          document.getElementById('arm').setAttribute("class", "btn btn-outline-secondary");
+        }
+      },
+      changeCSSback: function() {
+        if (this.muscleGroup == ""){
+          document.getElementById('back').setAttribute("class", "btn btn-outline-secondary button-active");
+        } else {
+          document.getElementById('back').setAttribute("class", "btn btn-outline-secondary");
+        }
+      },
+      changeCSSleg: function() {
+        if (this.muscleGroup == ""){
+          document.getElementById('leg').setAttribute("class", "btn btn-outline-secondary button-active");
+        } else {
+          document.getElementById('leg').setAttribute("class", "btn btn-outline-secondary");
+        }
+      },
+      changeCSSchest: function() {
+        if (this.muscleGroup == ""){
+          document.getElementById('chest').setAttribute("class", "btn btn-outline-secondary button-active");
+        } else {
+          document.getElementById('chest').setAttribute("class", "btn btn-outline-secondary");
+        }
+      },
+      changeCSSabs: function() {
+        if (this.muscleGroup == ""){
+          document.getElementById('abs').setAttribute("class", "btn btn-outline-secondary button-active");
+        } else {
+          document.getElementById('abs').setAttribute("class", "btn btn-outline-secondary");
+        }
+      },
+      changeCSScalves: function() {
+        if (this.muscleGroup == ""){
+          document.getElementById('calves').setAttribute("class", "btn btn-outline-secondary button-active");
+        } else {
+          document.getElementById('calves').setAttribute("class", "btn btn-outline-secondary");
+        }
       },
     },
   };
