@@ -62,10 +62,10 @@
         </div>
       </div>
       <dialog id="exercise-details">
-          <form method="dialog" class="float-center">
+          <form method="dialog">
             <h2 class="vertical-center">{{ currentExercise.name }}</h2>
-            <p>Description:{{ currentExercise.description }}</p>
-            <p>Muscles: {{ currentExercise.muscle }}</p>
+            <p><h5 class="exercise-info-titles">Description:</h5>{{ currentExercise.description }}</p>
+            <p><h5 class="exercise-info-titles">Muscles:</h5>{{ currentExercise.muscle }}</p>
             <div class="vertical-center">
               <button class="btn btn-outline-secondary">Close</button>
             </div>
@@ -74,22 +74,22 @@
       <dialog id="lift-create">
         <form method="dialog">
           <div class="input-content">
-          <h2>{{ currentExercise.name }}</h2>
-          <p>
-              <button v-on:click.prevent="Default()" v-on:click="newLiftParams.reps -= 1" class="btn up-down-button" data-toggle="">-</button>
-              <button v-on:click.prevent="Default()" v-on:click="newLiftParams.reps += 1" class="btn up-down-button" data-toggle="">+</button>
-            <input type="number" v-model="newLiftParams.reps" class="new-workout-input">Reps
-          </p>
-          <p>
-            <button v-on:click.prevent="Default()" v-on:click="newLiftParams.weight -= 5" class="btn up-down-button" data-toggle="">-</button>
-            <button v-on:click.prevent="Default()" v-on:click="newLiftParams.weight += 5" class="btn up-down-button" data-toggle="">+</button>
-            <input type="number" v-model="newLiftParams.weight" class="new-workout-input"> Weight
-          </p>
-          <p>
-            <button v-on:click.prevent="Default()" v-on:click="newLiftParams.sets -= 1" class="btn up-down-button" data-toggle="">-</button>
-            <button v-on:click.prevent="Default()" v-on:click="newLiftParams.sets += 1" class="btn up-down-button" data-toggle="">+</button>
-            <input type="number" v-model="newLiftParams.sets" class="new-workout-input"> Sets
-          </p>
+            <h2>{{ currentExercise.name }}</h2>
+            <p>
+                <button v-on:click.prevent="Default()" v-on:click="newLiftParams.reps -= 1" class="btn up-down-button" data-toggle="">-</button>
+                <button v-on:click.prevent="Default()" v-on:click="newLiftParams.reps += 1" class="btn up-down-button" data-toggle="">+</button>
+              <input type="number" v-model="newLiftParams.reps" class="new-workout-input">Reps
+            </p>
+            <p>
+              <button v-on:click.prevent="Default()" v-on:click="newLiftParams.weight -= 5" class="btn up-down-button" data-toggle="">-</button>
+              <button v-on:click.prevent="Default()" v-on:click="newLiftParams.weight += 5" class="btn up-down-button" data-toggle="">+</button>
+              <input type="number" v-model="newLiftParams.weight" class="new-workout-input"> Weight
+            </p>
+            <p>
+              <button v-on:click.prevent="Default()" v-on:click="newLiftParams.sets -= 1" class="btn up-down-button" data-toggle="">-</button>
+              <button v-on:click.prevent="Default()" v-on:click="newLiftParams.sets += 1" class="btn up-down-button" data-toggle="">+</button>
+              <input type="number" v-model="newLiftParams.sets" class="new-workout-input"> Sets
+            </p>
           </div>
           <div class="vertical-center">
             <button v-on:click="liftCreate()" class="btn btn-outline-secondary">Add to Workout</button>
