@@ -679,8 +679,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .button-active{
-  background-color: rgb(197, 105, 105);
+  background-color: rgba(196, 75, 75, 0.726);
 }
+
 .btn-outline-secondary{
   color:#444444;
   box-shadow: none;
@@ -692,6 +693,7 @@ h1, h2, h3, h4, h5, h6 {
   border-color: rgb(224, 75, 75);
   box-shadow: none;
 }
+
 section {
   padding: 60px 0;
 }
