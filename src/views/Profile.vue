@@ -8,6 +8,8 @@
       <h1 class="vertical-center">Hello {{ user.name }}</h1>
       <br>
       <br>
+      {{julTotal}}-{{augTotal}}
+      <div id="container" style="width:100%; height:400px;"></div>
       <div class="container white-background">
         <div v-for=" workout in workouts">
           <div class="card border-secondary mb-3">
@@ -47,6 +49,9 @@
         currentWorkout: {},
         lifts: [],
         exercises: [],
+        totals: [],
+        julTotal: 0,
+        augTotal: 0,
       };
     },
     created: function () {
@@ -56,7 +61,10 @@
     methods: {
       workoutIndex: function() {
         axios.get("/workouts").then((response) => {console.log("workout index",   response); 
-          this.workouts = response.data;
+          this.workouts = response.data.workout;
+          this.totals = response.data.total;
+          this.julTotal = this.totals["2021-07-01 00:00:00 UTC"]
+          this.augTotal = this.totals["2021-08-01 00:00:00 UTC"]
         });
       },
       userShow: function() {
@@ -66,4 +74,26 @@
       },
     },
   };
+  document.addEventListener('DOMContentLoaded', function () {
+    const chart = Highcharts.chart('container', {
+      chart: {
+          type: 'bar'
+      },
+      title: {
+          text: 'Monthly Data'
+      },
+      xAxis: {
+          categories: ['Jul', 'Aug', 'Sep']
+      },
+      yAxis: {
+          title: {
+              text: 'Fruit eaten'
+          }
+      },
+      series: [{
+          name: 'Jane',
+          data: [2, 0, 4]
+      }]
+    });
+  });
 </script>
