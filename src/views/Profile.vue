@@ -55,9 +55,9 @@
     },
     methods: {
       workoutIndex: function() {
-        axios.get("/workouts").then((response) => {console.log("workout index", response); 
-        this.workouts = response.data;
-      });
+        axios.get("/workouts").then((response) => {console.log("workout index",   response); 
+          this.workouts = response.data;
+        });
       },
       userShow: function() {
         axios.get(`/users/${localStorage.user_id}`).then((response) => {console.log(response)

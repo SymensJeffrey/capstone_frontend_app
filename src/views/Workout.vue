@@ -57,8 +57,8 @@
         console.log("creating workout...")
         axios.post("/workouts").then((response) => {console.log("workout create", response);
           this.workout = response.data;
+          this.$router.push("/profile");
         });
-        this.$router.push("/profile");
       },
       pushToHome: function() {
         this.$router.push("/");
