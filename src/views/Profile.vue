@@ -8,10 +8,10 @@
       <h1 class="vertical-center">Hello {{ user.name }}</h1>
       <br>
       <br>
-      <div id="container" style="width:100%; height:400px;"></div>
+      <!-- <div id="container" style="width:100%; height:400px;"></div> -->
       <div class="container white-background">
-        <div v-for=" workout in workouts">
-          <div class="card border-secondary mb-3">
+        <div v-for=" workout in workouts" id="lift-cards-center">
+          <div class="card border-secondary mb-3 workout-card-width">
           <h5 class="card-header">{{ workout.date }}</h5>
             <div class="card-body">
               <div class="row">
@@ -73,25 +73,25 @@
       },
     },
   };
-  document.addEventListener('DOMContentLoaded', function () {
-    const chart = Highcharts.chart('container', {
-      chart: {
-          type: 'bar'
-      },
-      title: {
-          text: 'Monthly Data'
-      },
-      xAxis: {
-          categories: ['Jul', 'Aug', 'Sep']
-      },
-      yAxis: {
-          title: {
-              text: 'Workouts'
-          }
-      },
-      series: [{
-          data: [2,2,2]
-      }]
-    });
-  });
+  // document.addEventListener('DOMContentLoaded', function () {
+  //   const chart = Highcharts.chart('container', {
+  //     chart: {
+  //         type: 'bar'
+  //     },
+  //     title: {
+  //         text: 'Monthly Data'
+  //     },
+  //     xAxis: {
+  //         categories: ['Jul', 'Aug', 'Sep']
+  //     },
+  //     yAxis: {
+  //         title: {
+  //             text: 'Workouts'
+  //         }
+  //     },
+  //     series: [{
+  //         data: [2,2,2]
+  //     }]
+  //   });
+  // });
 </script>

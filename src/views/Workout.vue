@@ -14,8 +14,8 @@
         <h2>{{noLiftMessage}}</h2>
       </div>
       <div class="container">
-        <div v-for="lift in lifts">
-          <div class="card border-secondary mb-3 workout-card-width">
+        <div v-for="lift in lifts" id="lift-cards-center">
+          <div class="card border-secondary workout-card-width">
             <h5 class="card-header">{{ lift.exercise.name }}</h5>
             <div class="card-body">
               <h5 class="card-title">Reps: {{ lift.reps }} | Weight: {{ lift.weight }}lbs | Sets: {{ lift.sets}}
