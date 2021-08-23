@@ -8,7 +8,6 @@
       <h1 class="vertical-center">Hello {{ user.name }}</h1>
       <br>
       <br>
-      {{julTotal}}-{{augTotal}}
       <div id="container" style="width:100%; height:400px;"></div>
       <div class="container white-background">
         <div v-for=" workout in workouts">
@@ -87,12 +86,11 @@
       },
       yAxis: {
           title: {
-              text: 'Fruit eaten'
+              text: 'Workouts'
           }
       },
       series: [{
-          name: 'Jane',
-          data: [2, 0, 4]
+          data: [2,2,2]
       }]
     });
   });
