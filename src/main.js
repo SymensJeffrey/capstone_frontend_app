@@ -6,7 +6,7 @@ import "bootstrap";
 import Vue2Filters from "vue2-filters";
 Vue.use(Vue2Filters)
 
-axios.defaults.baseURL = process.env.NODE_ENV === "development" ? "http://localhost:3000" : "https://gymology.herokuapp.com/";
+axios.defaults.baseURL = process.env.NODE_ENV === "development" ? "http://localhost:3000" : "https://gymology.herokuapp.com";
 
 var jwt = localStorage.getItem("jwt");
 if (jwt) {
