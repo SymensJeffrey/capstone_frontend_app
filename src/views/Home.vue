@@ -132,7 +132,7 @@
     },
     methods: {
       exercisesIndex: function() {
-        axios.get("https://gymology.herokuapp.com/exercises").then((response) => {console.log("exercises index", response); 
+        axios.get("/exercises").then((response) => {console.log("exercises index", response); 
         this.exercises = response.data;
       });
       },
