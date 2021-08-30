@@ -45,6 +45,7 @@
         <button id="chest" v-on:click="changeCSSchest(),showChest()" class="btn btn-outline-secondary">Chest</button>
         <button id="abs" v-on:click="changeCSSabs(),showAbs()" class="btn btn-outline-secondary">Abs</button>
         <button id="calves" v-on:click="changeCSScalves(),showCalves()" class="btn btn-outline-secondary">Calves</button>
+        <button id="shoulders" v-on:click="changeCSSshoulders(),showShoulders()" class="btn btn-outline-secondary">Shoulders</button>
       </div>
       <br>
       <br>
@@ -217,6 +218,13 @@
           this.muscleGroup = ""
         }
       },
+      showShoulders: function() {
+        if (this.muscleGroup == ""){
+        this.muscleGroup = "shoulders"
+        } else {
+          this.muscleGroup = ""
+        }
+      },
       changeCSSarm: function() {
         if (this.muscleGroup == ""){
           document.getElementById('arm').setAttribute("class", "btn btn-outline-secondary button-active");
@@ -257,6 +265,13 @@
           document.getElementById('calves').setAttribute("class", "btn btn-outline-secondary button-active");
         } else {
           document.getElementById('calves').setAttribute("class", "btn btn-outline-secondary");
+        }
+      },
+      changeCSSshoulders: function() {
+        if (this.muscleGroup == ""){
+          document.getElementById('shoulders').setAttribute("class", "btn btn-outline-secondary button-active");
+        } else {
+          document.getElementById('shoulders').setAttribute("class", "btn btn-outline-secondary");
         }
       },
       increaseReps: function() {
